@@ -14,4 +14,7 @@ if option == "1" :
     elif(option == "no"):
         print("enjoy")
 elif option == "2":
-    option == print ('youre a fancy fish parent')
+    option == print ('youre a fancy fish parent') 
+elif option == "3": 
+    option = print ("you should get more then one")
+else: print("i dont think thats a kind of fish")
