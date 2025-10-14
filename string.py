@@ -27,6 +27,8 @@ for i in range(len(mystr)):
         print("executing C") 
     elif option == "D":
             print("executing D")    
+
+
             
 
 
