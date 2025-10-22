@@ -12,7 +12,6 @@ for i in range(len(mystr)):
 
 
 
-
     #template program 
     print("1. A")
     print("2. B")
