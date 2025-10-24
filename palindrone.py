@@ -22,5 +22,6 @@ while check == False:
         end -= 1
 
     if anything_brainrot:
-        print(f "'{word}' is a palindrone") 
+        print(f"'{word}' is a palindrone") 
     else: 
+        print(f"'{word}is not palidrone")
