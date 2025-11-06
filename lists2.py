@@ -39,7 +39,7 @@ for i in range(len(mylist)):
             names.append(name) #adds the name you typed in into the list of names 
             
         print(name) 
-        
+                                                                                                                                            
         print("example 4")
         
         students = ["john", "joe", "paul"] # this is a little dangrous 
