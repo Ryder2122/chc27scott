@@ -1,6 +1,5 @@
 # semester project: rock, paper, sicssors 
 import random
-
 choices = ["rock", "paper", "scissors"]
 
 while True:
@@ -18,22 +17,19 @@ while True:
 
 
     if user_choice == computer_choice:
-        print("It's a tie!")
+        print("It's a tie!") 
     elif (user_choice == "rock" and computer_choice == "scissors"):
      (user_choice == "scissors" and computer_choice == "paper")
     (user_choice == "paper" and computer_choice == "rock")
     print("You win!")
-else: #this will run if its a tie and you did not win 
-    print("You lose!")   
-        
+print("You lose!")   
 
-
-    play_again = input("\nDo you want to play again? (yes please/nah im chilling): ").lower()
-    if play_again != "yes please":
+play_again = input("Do you want to play again? (yes please/nah im chilling): ")
+if play_again != "yes please":
                 print("Thanks for playing!")
 
 
-    actions = ["rock","paper", "sicssors"]
+actions = ["rock","paper", "sicssors"]
 
 user_choice = input( "enter your chocie (rock, paper, sicssors)")
 if user_choice not in actions:
@@ -48,15 +44,12 @@ elif user_choice == "rock":
                 if computer_choice == "scissors":
                     print("Rock smashes scissors! You win!")
         
-print("Paper covers rock! You lose.")
+print("Paper covers rock! You lose.")   
 user_choice == "paper"
 if computer_choice == "rock":
-                print("Paper covers rock! You win!")
+                print("Paper covers rock! You lose!")
         
 print("Scissors cuts paper! You lose.")
 user_choice == "scissors"
 if computer_choice == "paper":
             print("Scissors cuts paper! You win!")
-        
-
- 
