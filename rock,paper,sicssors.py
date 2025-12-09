@@ -10,21 +10,28 @@ while True:
     if user_choice not in choices:
         print("Invalid choice. Please choose rock, paper, or scissors.")
 
-
-
     computer_choice = random.choice(choices)
     print(f"\nYou chose: {user_choice}, Computer chose: {computer_choice}\n")
 
     if user_choice == computer_choice:
         print("It's a tie!") 
-    elif( 
-        (user_choice == "rock" and computer_choice == "scissors"):
+    elif       (user_choice == "rock" and computer_choice == "scissors"):
         (user_choice == "scissors" and computer_choice == "paper")
         (user_choice == "paper" and computer_choice == "rock")
-    ):
+
         print("You win!")
     else:
         print("You lose!")   
+        if computer_choice: ("wins") 
+        print ("stop trying i am alot better") 
+
+    balance = 100  # Starting money
+    win_reward = 20
+    loss_penalty = 10
+
+    print(" Rock-Paper-Scissors!")
+     print(f"You start with ${balance}. a win{win_reward},a loss{loss_penalty}.")
+   
     play_again = input("Do you want to play again? (yes please/nah im chilling): ")
     if play_again != "yes please":
-            print("Thanks for playing!")
+            print("Thanks for playing!") 
