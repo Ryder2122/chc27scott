@@ -1,9 +1,8 @@
 # semester project: rock, paper, sicssors 
 import random
-choices = ["rock", "paper", "scissors"]
 
 while True:
-
+    choices = ("rock, paper, sicssors") 
     print("Welcome to Rock-Paper-Scissors with Money!")
     print("Starting balance: ${10000}")
     win_reward = 500
@@ -16,7 +15,6 @@ while True:
             
         if player_choice not in choices:
             print("Invalid choice. Try again.")
-                
             
     computer_choice = random.choice(choices)
     print(f"Computer chose: {computer_choice}")
@@ -29,10 +27,10 @@ while True:
     (player_choice == "scissors" and computer_choice == "paper")
                 
     
-    print(f"You win! +${win_reward} | Balance: ${balance}")
+    print(f"You win! +${win_reward} Balance: ${balance}")
     balance += win_reward
 
-    print(f"You lose! -${loss_penalty} | Balance: ${balance}")
+    print(f"You lose! -${loss_penalty} Balance: ${balance}")
     balance -= loss_penalty            
     
     

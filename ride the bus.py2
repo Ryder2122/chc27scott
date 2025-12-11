@@ -1,0 +1,67 @@
+ while stage <= 4:
+        if stage == 1:
+            # Stage 1: Red or Black
+            guess = input("Stage 1 - Red or Black? ").strip().lower()
+            card = draw_card(deck)
+            cards_drawn = [card]
+            print(f"Card drawn: {card_str(card)}")
+            if guess == SUIT_COLORS[card[1]]:
+                print("Correct!\n")
+                stage += 1
+            else:
+                print("Wrong! Back to Stage 1.\n")
+                stage = 1
+
+        elif stage == 2:
+            # Stage 2: Higher or Lower
+            guess = input("Stage 2 - Higher or Lower? ").strip().lower()
+            card = draw_card(deck)
+            cards_drawn.append(card)
+            print(f"Card drawn: {card_str(card)}")
+            prev_value = RANK_VALUES[cards_drawn[0][0]]
+            curr_value = RANK_VALUES[card[0]]
+            if (guess == "higher" and curr_value > prev_value) or \
+               (guess == "lower" and curr_value < prev_value):
+                print("Correct!\n")
+                stage += 1
+            else:
+                print("Wrong! Back to Stage 1.\n")
+                stage = 1
+
+        elif stage == 3:
+            # Stage 3: In Between or Outside
+            guess = input("Stage 3 - In Between or Outside? ").strip().lower()
+            card = draw_card(deck)
+            cards_drawn.append(card)
+            print(f"Card drawn: {card_str(card)}")
+            values = sorted([RANK_VALUES[c[0]] for c in cards_drawn[:2]])
+            curr_value = RANK_VALUES[card[0]]
+            in_between = values[0] < curr_value < values[1]
+            if (guess == "in between" and in_between) or \
+               (guess == "outside" and not in_between):
+                print("Correct!\n")
+                stage += 1
+            else:
+                print("Wrong! Back to Stage 1.\n")
+                stage = 1
+
+        elif stage == 4:
+            # Stage 4: Suit Guess
+            guess = input("Stage 4 - Guess the Suit (Hearts/Diamonds/Clubs/Spades): ").strip().capitalize()
+            card = draw_card(deck)
+            cards_drawn.append(card)
+            print(f"Card drawn: {card_str(card)}")
+            if guess == card[1]:
+                print("🎉 You completed Ride the Bus! 🎉\n")
+                break
+            else:
+                print("Wrong! Back to Stage 1.\n")
+                stage = 1
+
+if __name__ == "__main__":
+    try:
+        ride_the_bus()
+    except KeyboardInterrupt:
+        print("\nGame exited.")
+
+
