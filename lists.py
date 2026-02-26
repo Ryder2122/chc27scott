@@ -8,7 +8,7 @@ num2 = 20
 """
 what happens when our data is set tp 100 data points long? creating individual varaibles 
 
-
+ 
 """
 
 mylist = [ 5, 10, 15, 20,] 
@@ -34,5 +34,14 @@ while i <= 3:
     i = i + 1 
     
     print(mylist) 
-    
-    
+                 
+
+
+
+
+
+
+
+
+
+
