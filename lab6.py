@@ -9,7 +9,7 @@ def drawBoard(board):
             else:
                 print(space, end=" ")
         print()
-    print("0 1 2 3 4 5 6")  # column numbers
+    print("0 1 2 3 4 5 6")  
 
 
 def switchPlayer(player):
@@ -20,11 +20,11 @@ def switchPlayer(player):
 
 
 def dropPiece(board, player, column):
-    # Check if column is full
+    
     if board[0][column] != 0:
         return False
 
-    # Start from bottom row
+    
     for row in range(len(board) - 1, -1, -1):
         if board[row][column] == 0:
             board[row][column] = player
@@ -37,25 +37,25 @@ def checkWinner(board, player):
     ROWS = len(board)
     COLS = len(board[0])
 
-    # Horizontal check
+    
     for r in range(ROWS):
         for c in range(COLS - 3):
             if board[r][c] == board[r][c+1] == board[r][c+2] == board[r][c+3] == player:
                 return True
 
-    # Vertical check
+    
     for r in range(ROWS - 3):
         for c in range(COLS):
             if board[r][c] == board[r+1][c] == board[r+2][c] == board[r+3][c] == player:
                 return True
 
-    # Diagonal (down-right)
+    
     for r in range(ROWS - 3):
         for c in range(COLS - 3):
             if board[r][c] == board[r+1][c+1] == board[r+2][c+2] == board[r+3][c+3] == player:
                 return True
 
-    # Diagonal (up-right)
+    
     for r in range(3, ROWS):
         for c in range(COLS - 3):
             if board[r][c] == board[r-1][c+1] == board[r-2][c+2] == board[r-3][c+3] == player:
